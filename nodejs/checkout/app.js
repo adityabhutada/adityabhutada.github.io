@@ -34,7 +34,7 @@ app.post('/request',function(req, res, next){
 		"notifyUrl" : req.body.notifyUrl
 	},
 	mode = "TEST",
-	secretKey = "<YOUR SECRET KEY HERE>",
+	secretKey = "0ee21107d296c2c5ce145e6608abba516de42e2a",
 	sortedkeys = Object.keys(postData),
 	url="",
 	signatureData = "";
@@ -64,7 +64,7 @@ app.post('/response',function(req, res, next){
 	  "txMsg" : req.body.txMsg,
 	  "txTime" : req.body.txTime
 	 },
-	secretKey = "<YOUR SECRET KEY HERE>",
+	secretKey = "0ee21107d296c2c5ce145e6608abba516de42e2a",
 
 	signatureData = "";
 	for (var key in postData) {
