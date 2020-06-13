@@ -479,9 +479,45 @@ document.write('<a href=\"mailto:' + user + '@' + domain + '\">' + 'aadityabhuta
           <h2>Pay here!</h2>
       </div>
       <div class="row mb-70">
-          
+        <form id="redirectForm" method="post" action="https://test.cashfree.com/billpay/checkout/post/submit">
+          <input type="hidden" name="appId" value="180159eff0103fa595fa71e5451081"/>
+          <input type="hidden" name="orderId" value="order00001"/>
+          <input type="" name="orderAmount" value="100"/>
+          <input type="hidden" name="orderCurrency" value="INR"/>
+          <input type="hidden" name="orderNote" value="test"/>
+          <input type="" name="customerName" value="John Doe"/>
+          <input type="" name="customerEmail" value="Johndoe@test.com"/>
+          <input type="" name="customerPhone" value="9999999999"/>
+          <input type="hidden" name="returnUrl" value="https://adityabhutada.com/thankyou.html"/>
+          <input type="hidden" name="notifyUrl" value=""/>
+          <input type="hidden" name="signature" value="<GENERATED_SIGNATURE>"/>
+            <input type="submit" value="Pay">
+          </form>
+      
+        <?php
+        $secretKey = "0ee21107d296c2c5ce145e6608abba516de42e2a";
+  $postData = array( 
+  "appId" => $appId, 
+  "orderId" => $orderId, 
+  "orderAmount" => $orderAmount, 
+  "orderCurrency" => $orderCurrency, 
+  "orderNote" => $orderNote, 
+  "customerName" => $customerName, 
+  "customerPhone" => $customerPhone, 
+  "customerEmail" => $customerEmail,
+  "returnUrl" => $returnUrl, 
+  "notifyUrl" => $notifyUrl,
+);
+ // get secret key from your config
+ ksort($postData);
+ $signatureData = "";
+ foreach ($postData as $key => $value){
+      $signatureData .= $key.$value;
+ }
+ $signature = hash_hmac('sha256', $signatureData, $secretKey,true);
+ $signature = base64_encode($signature);
+ ?>
       </div>
-
   </div>
 </section>
 <!--Payment Section End-->
