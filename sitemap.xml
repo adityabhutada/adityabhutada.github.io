@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
--<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
--<url>
+<url>
 
 <loc>https://www.adityabhutada.com/</loc>
 
@@ -16,7 +16,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 
--<url>
+<url>
 
 <loc>https://www.adityabhutada.com/tnc</loc>
 
@@ -27,7 +27,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 
--<url>
+<url>
 
 <loc>https://www.adityabhutada.com/privacy</loc>
 
@@ -38,7 +38,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 
--<url>
+<url>
 
 <loc>https://www.adityabhutada.com/refund</loc>
 
