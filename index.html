@@ -566,15 +566,13 @@
                 <input type="hidden" name="subject" value="Contract Sign">
                 <div class="row">
                     <div class="col-md-6 mb-40">
-                    <span class="input">
-                        <input id="name" class="input__field" name="name" required="">
-                        <label class="input__label" for="name">Your Name/Company Name</label>
+                    <span class="input">Your Name/Company Name:
+                        <input id="name" class="input__field" name="name" placeholder="Client name goes here." required="">
                     </span>
                     </div>
                     <div class="col-md-6 mb-40">
-                    <span class="input">
-                        <input id="email" class="input__field" type="email" name="email" required="">
-                        <label class="input__label" for="email">Email</label>
+                    <span class="input">Email:
+                        <input id="email" class="input__field" type="email" name="email" placeholder="Contract will be mailed here." required="">
                     </span>
                     </div>
                     <div class="col-md-6 mb-40">
@@ -587,14 +585,20 @@
                             <input id="finish_date" class="input__field" type="date" name="finish_date" required="">
                     </span>
                     </div>
-                      <div class="col-md-6 mb-40">
+                      <div class="col-md-6 mb-20">
                         <span class="input">Total Fees:
-                          <input id="fee" class="input__field" type="text" name="fee" onchange="myChangeFunction(this)" required="">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">₹</span>
+                          <input id="fee" class="input__field" type="text" name="fee" placeholder="Total amount to be paid." onchange="myChangeFunction(this)" required="">
+                          </div>
                         </span>
                       </div>
-                      <div class="col-md-6 mb-40">
+                      <div class="col-md-6 mb-20">
                         <span class="input">Payable Fees (50%):
-                          <input id="halffee" class="input__field" type="text" name="halffee" readonly>
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">₹</span>
+                          <input id="halffee" class="input__field" type="text" name="halffee" placeholder="Advance payable amount." readonly>
+                        </div>
                           <script type="text/javascript">
                           function myChangeFunction(input1) {
                             var input2 = document.getElementById('halffee');
@@ -616,6 +620,12 @@
                         var today = year + "-" + month + "-" + day;
                         document.getElementById('todaydate').value = today;
                       </script>
+                      </span>
+                    </div>
+                    <div class="col-md-12 mb-10">
+                      <span class="input">
+                        <input id="check" type="checkbox" value="agree" required="">
+                        <label for="check">Agree to digitally sign and generate the contract.</label>
                       </span>
                     </div>
                 </div>
