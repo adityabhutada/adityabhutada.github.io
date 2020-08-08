@@ -589,17 +589,18 @@
                     </div>
                       <div class="col-md-6 mb-40">
                         <span class="input">Total Fees:
-                          <input id="fee" class="input__field" type="text" name="fee" required="">
+                          <input id="fee" class="input__field" type="text" name="fee" onchange="myChangeFunction(this)" required="">
                         </span>
                       </div>
                       <div class="col-md-6 mb-40">
-                        <span class="input">Payable Fees:
+                        <span class="input">Payable Fees (50%):
                           <input id="halffee" class="input__field" type="text" name="halffee" readonly>
                           <script type="text/javascript">
-                            $('#fee').on('keyup', function() {
-                              $('#halffee').val($(this).val() * 0.5);
-                            })
-                            </script>
+                          function myChangeFunction(input1) {
+                            var input2 = document.getElementById('halffee');
+                            input2.value = input1.value * 0.5;
+                          }
+                          </script>
                         </span>
                       </div>
                     <div class="col-md-6 mb-10">
