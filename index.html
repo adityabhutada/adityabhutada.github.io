@@ -562,17 +562,17 @@
                   <div class="subheading">
                     <h3>Fill in the details.</h3>
                   </div>
-                <form name="contract" method="post" netlify="" id="contract">
+                <form name="contract" method="post" netlify="">
                 <input type="hidden" name="subject" value="Contract Sign">
                 <div class="row">
                     <div class="col-md-6 mb-40">
                     <span class="input">Your Name/Company Name:
-                        <input id="name" class="input__field" name="name" placeholder="Client name goes here." required="">
+                        <input class="input__field" name="name" placeholder="Client name goes here." required="">
                     </span>
                     </div>
                     <div class="col-md-6 mb-40">
                     <span class="input">Email:
-                        <input id="email" class="input__field" type="email" name="email" placeholder="Contract will be mailed here." required="">
+                        <input class="input__field" type="email" name="email" placeholder="Contract will be mailed here." required="">
                     </span>
                     </div>
                     <div class="col-md-6 mb-40">
@@ -587,19 +587,19 @@
                     </div>
                       <div class="col-md-6 mb-20">
                         <span class="input">Total Fees:
-                          <div class="input-group-prepend">
+                          <span class="input-group-prepend">
                             <span class="input-group-text">₹</span>
                           <input id="fee" class="input__field" type="text" name="fee" placeholder="Total amount to be paid." onchange="myChangeFunction(this)" required="">
-                          </div>
+                          </span>
                         </span>
                       </div>
                       <div class="col-md-6 mb-20">
                         <span class="input">Payable Fees (50%):
-                          <div class="input-group-prepend">
+                          <span class="input-group-prepend">
                             <span class="input-group-text">₹</span>
                           <input id="halffee" class="input__field" type="text" name="halffee" placeholder="Advance payable amount." readonly>
-                        </div>
-                          <script type="text/javascript">
+                          </span>
+                          <script>
                           function myChangeFunction(input1) {
                             var input2 = document.getElementById('halffee');
                             input2.value = input1.value * 0.5;
@@ -610,7 +610,7 @@
                     <div class="col-md-6 mb-10">
                       <span class="input">
                       <input id="todaydate" class="input__field" type="date" name="todaydate" hidden>
-                      <script type="text/javascript">
+                      <script>
                         var date = new Date();
                         var day = date.getDate();
                         var month = date.getMonth() + 1;
@@ -631,7 +631,7 @@
                 </div>
                     <div class="col-md-12 text-center">
                         <span class="input">
-                          <button id="submit" class="btn-main" type="submit" value="Submit">
+                          <button class="btn-main" type="submit" value="Submit">
                             <span class="input">
                               <span class="input">Email Contract</span>
                             </span>
