@@ -101,8 +101,6 @@
 
   gtag('config', 'UA-160634945-4');
   </script>
-  <!-- BMC widget-->
-  <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="aadi" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting." data-color="#BD5FFF" data-position="right" data-x_margin="18" data-y_margin="18"></script>
 </head>
 <body>
   <div class="preloader">
@@ -142,6 +140,9 @@
               </li>
               <li>
                 <a href="#contacts" class="pt-link"><span class=nav-menu-icon><i class="lnr lnr-envelope"></i></span>Contact</a>
+              </li>
+              <li>
+                <a href="#contract" class="pt-link"><span class=nav-menu-icon><i class="lnr lnr-pencil"></i></span>Contract</a>
               </li>
             </ul>
           </nav>
@@ -549,6 +550,87 @@
           <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 15px 7px 10px !important;line-height: 35px !important;height:51px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#000000 !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 15px 7px 10px !important;font-size: 20px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px #d1a71d !important;-webkit-box-shadow: 0px 1px 2px 2px #d1a71d !important;margin: 22px auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#d1a71d !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/aadi"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a Mocha ☕"><span style="margin-left:5px;font-size:19px !important;">Buy me a Mocha ☕</span></a>
         </div>
       </section>
+      <!--Contract Section-->
+      <section id="contract" class="contact-section pt-page">
+        <div class="section-container">
+            <div class="page-heading">
+            <span class=icon><i class="lnr lnr-pencil"></i></span>
+            <h2>Contract.</h2>
+            </div>
+            <div class="row mb-70">
+                <div class="col-lg-8 offset-lg-2">
+                  <div class="subheading">
+                    <h3>Fill in the details.</h3>
+                  </div>
+                <form name="contract" method="post" netlify="" id="contract">
+                <input type="hidden" name="subject" value="Contract Sign">
+                <div class="row">
+                    <div class="col-md-6 mb-40">
+                    <span class="input">
+                        <input id="name" class="input__field" name="name" required="">
+                        <label class="input__label" for="name">Your Name/Company Name</label>
+                    </span>
+                    </div>
+                    <div class="col-md-6 mb-40">
+                    <span class="input">
+                        <input id="email" class="input__field" type="email" name="email" required="">
+                        <label class="input__label" for="email">Email</label>
+                    </span>
+                    </div>
+                    <div class="col-md-6 mb-40">
+                    <span class="input">Project Start Date:
+                        <input id="start_date" class="input__field" type="date" name="start_date" required="">
+                    </span>
+                    </div>
+                    <div class="col-md-6 mb-40">
+                    <span class="input">Project End Date:
+                            <input id="finish_date" class="input__field" type="date" name="finish_date" required="">
+                    </span>
+                    </div>
+                      <div class="col-md-6 mb-40">
+                        <span class="input">Total Fees:
+                          <input id="fee" class="input__field" type="text" name="fee" required="">
+                        </span>
+                      </div>
+                      <div class="col-md-6 mb-40">
+                        <span class="input">Payable Fees:
+                          <input id="halffee" class="input__field" type="text" name="halffee" readonly>
+                          <script type="text/javascript">
+                            $('#fee').on('keyup', function() {
+                              $('#halffee').val($(this).val() * 0.5);
+                            })
+                            </script>
+                        </span>
+                      </div>
+                    <div class="col-md-6 mb-10">
+                      <span class="input">
+                      <input id="todaydate" class="input__field" type="date" name="todaydate" hidden>
+                      <script type="text/javascript">
+                        var date = new Date();
+                        var day = date.getDate();
+                        var month = date.getMonth() + 1;
+                        var year = date.getFullYear();
+                        if (month < 10) month = "0" + month;
+                        if (day < 10) day = "0" + day;
+                        var today = year + "-" + month + "-" + day;
+                        document.getElementById('todaydate').value = today;
+                      </script>
+                      </span>
+                    </div>
+                </div>
+                    <div class="col-md-12 text-center">
+                        <span class="input">
+                          <button id="submit" class="btn-main" type="submit" value="Submit">
+                            <span class="input">
+                              <span class="input">Generate Contract</span>
+                            </span>
+                          </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     </div>
     <script src="js/jquery.min.js"></script> 
     <script src="js/plugins.min.js"></script> 
