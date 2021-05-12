@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: adityabhutada.github.io
+Token: c108dfaf929a32ef03f60b949cb4726e65786476ee042208cf3c69c8bbc33e40
