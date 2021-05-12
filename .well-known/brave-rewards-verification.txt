@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: adityabhutada.com
-Token: 3aa1e29e8d3d7f5194c1547d3ddefc0c2177ff970215e13a116a52b83d90ab2e
